@@ -8,7 +8,7 @@ license=('custom')
 url="http://www.soulseekqt.net/news/"
 depends=('libxext' 'fontconfig' 'libxrender')
 md5sums=('c843e748a129e4ad9461280aeb2b957a'
-         '0a2137a47e9ac0b4b57a0d55872d0842'
+         '16f9bfbb52c375a8143d4b164a7ec995'
          '256ec24f7ad2d39ac8da0f1c03d3cafe')
 
 source=("https://dl.dropboxusercontent.com/u/7226803/SoulseekQt-$_pkgver.tgz"
