@@ -1,0 +1,22 @@
+pkgname=soulseekqt
+pkgver=20160117
+_pkgver=2016-1-17-64bit
+pkgrel=1
+pkgdesc="A desktop client for the Soulseek peer-to-peer file sharing network"
+arch=('x86_64')
+license=('custom')
+url="http://www.soulseekqt.net/news/"
+depends=('libxext' 'fontconfig' 'libxrender')
+md5sums=('c843e748a129e4ad9461280aeb2b957a'
+         '0a2137a47e9ac0b4b57a0d55872d0842'
+         '256ec24f7ad2d39ac8da0f1c03d3cafe')
+
+source=("https://dl.dropboxusercontent.com/u/7226803/SoulseekQt-$_pkgver.tgz"
+        $pkgname.desktop 
+        $pkgname.png)
+
+package() {
+  install -vDm755 "$srcdir/SoulseekQt-$_pkgver" "$pkgdir/usr/bin/$pkgname"
+  install -vDm644 "$srcdir/$pkgname.desktop" "$pkgdir/usr/share/applications/$pkgname.desktop"
+  install -vDm644 "$srcdir/$pkgname.png" "$pkgdir/usr/share/pixmaps/$pkgname.png"
+}
